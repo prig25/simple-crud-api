@@ -183,3 +183,8 @@ $ npm run start:prod
 }
 ```
 
+6. For tests running with coverage you can use:
+
+```
+npm test
+```
