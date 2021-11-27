@@ -18,10 +18,10 @@ function router(request, response) {
 
   switch (request.method) {
     case METHOD.GET:
-      if (path[person] === '' && path.length === person) {
+      if (path[person] === '' && path.length === 1) {
         response.setHeader("Content-Type", "text/html; charset=utf-8;");
         response.write("<h1>SIMPLE-CRUD-API</h1>");
-        response.end(`\nServer has been started... `);
+        response.end(`\nServer has been started...`);
       } else if ((path[person] === 'person' && path.length === 1) || (path.length === pathLength && path[personId] === '')) {
         GET.getPersons(response);
       } else if (path[person] === 'person' && path.length === pathLength) {

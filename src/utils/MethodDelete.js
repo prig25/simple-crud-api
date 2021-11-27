@@ -10,7 +10,7 @@ class MethodDelete {
       response.statusCode = 204;
       response.end();
     } else {
-      errorHandler(response, ERROR.UNKNOWN);
+      errorHandler(response, ERROR.PERSON_NOT_FOUND);
     }
   }
 }

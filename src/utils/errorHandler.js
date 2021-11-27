@@ -22,12 +22,6 @@ function errorHandler(response, errorCode) {
         message: "Resource that you requested doesn't exist..."
       }));
       break;
-    case ERROR.NOT_FOUND:
-      response.statusCode = 404;
-      response.end(JSON.stringify({
-        message: "Not found..."
-      }));
-      break;
     case ERROR.PERSON_NOT_FOUND:
       response.statusCode = 404;
       response.end(JSON.stringify({
@@ -37,13 +31,7 @@ function errorHandler(response, errorCode) {
     case ERROR.UNKNOWN:
       response.statusCode = 500;
       response.end(JSON.stringify({
-        message: `Error with code ${response.statusCode}...`
-      }));
-      break;
-    default:
-      response.statusCode = 500;
-      response.end(JSON.stringify({
-        message: `Error with code ${response.statusCode}...`
+        message: "Error with code 500..."
       }));
       break;
   }
