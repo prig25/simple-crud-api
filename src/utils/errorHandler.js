@@ -4,6 +4,10 @@ function errorHandler(response, errorCode) {
   response.setHeader("Content-Type", "application/json");
 
   switch (errorCode) {
+    case ERROR.NO_CONTENT:
+      response.statusCode = 204;
+      response.end();
+      break;
     case ERROR.PERSON_ID_NOT_VALID:
       response.statusCode = 400;
       response.end(JSON.stringify({
@@ -31,7 +35,7 @@ function errorHandler(response, errorCode) {
     case ERROR.UNKNOWN:
       response.statusCode = 500;
       response.end(JSON.stringify({
-        message: "Error with code 500... Check settings and body..."
+        message: "Server error..."
       }));
       break;
   }

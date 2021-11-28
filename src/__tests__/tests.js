@@ -25,7 +25,7 @@ const errorPathNotExist = {
   message: "Resource that you requested doesn't exist..."
 };
 const errorUnknown = {
-  message: "Error with code 500... Check settings and body..."
+  message: "Server error..."
 };
 
 const startMessage = '<h1>SIMPLE-CRUD-API</h1>\nServer has been started...';

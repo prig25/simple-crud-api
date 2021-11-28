@@ -26,7 +26,7 @@ class MethodPatch {
         }
       });
     } else {
-      errorHandler(response, ERROR.UNKNOWN);
+      errorHandler(response, ERROR.NO_CONTENT);
     }
   }
 }

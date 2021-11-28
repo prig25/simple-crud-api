@@ -31,7 +31,7 @@ class MethodPost {
         }
       });
     } else {
-      errorHandler(response, ERROR.UNKNOWN);
+      errorHandler(response, ERROR.NO_CONTENT);
     }
   }
 }
