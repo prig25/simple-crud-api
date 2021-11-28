@@ -31,7 +31,7 @@ function errorHandler(response, errorCode) {
     case ERROR.UNKNOWN:
       response.statusCode = 500;
       response.end(JSON.stringify({
-        message: "Error with code 500..."
+        message: "Error with code 500... Check settings and body..."
       }));
       break;
   }
